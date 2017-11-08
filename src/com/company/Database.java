@@ -45,7 +45,7 @@ public class Database {
         //numWriter = false;
         //notifyAll();
 
-        System.out.println(name + "is slipping");
+        System.out.println(name + " is slipping");
         semaphore("noti");
         readWrite();
         //semaphore("Writer");
@@ -76,7 +76,7 @@ public class Database {
 
                 } else if (numReader > 0) {
                     while (numReader > 0) {
-                        System.out.println("ЗАПУСК WRITER");
+                        System.out.println("WRITER ЖДЕТ READER'ов");
                         try {
                             wait();
                         } catch (InterruptedException e) {
